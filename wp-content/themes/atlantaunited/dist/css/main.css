@@ -73,9 +73,26 @@ table {
 }
 
 body {
-	background: red;
+	background: #ccc;
 }
 
 /* 2. Content ================================= */
+.container {
+	background-size: cover;
+	background-position-x: 50%;
+	width: 100%;
+	height: 0;
+	padding-bottom: 50vw;
+}
+
+.container h2 {
+	font-size: 10rem;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.4);
+	color: #b8a972;
+	text-align: center;
+	top: 40%;
+	width: 100%;
+}
 
 /*# sourceMappingURL=main.css.map */

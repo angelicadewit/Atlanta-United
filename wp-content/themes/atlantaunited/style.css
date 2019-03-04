@@ -97,33 +97,33 @@ video {
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
 }
 
 body {
-    line-height: 1
+    line-height: 1;
 }
 
-a {
-    text-decoration-skip-ink: auto
-}
+/* a {
+    text-decoration-skip-ink: auto;
+} */
 
 button {
-    outline: 0
+    outline: 0;
 }
 
 ol,
 ul {
-    list-style: none
+    list-style: none;
 }
 
 blockquote,
 q {
-    quotes: none
+    quotes: none;
 }
 
 blockquote:before,
@@ -131,25 +131,25 @@ blockquote:after,
 q:before,
 q:after {
     content: '';
-    content: none
+    content: none;
 }
 
 q {
     display: inline;
-    font-style: italic
+    font-style: italic;
 }
 
 q:before {
     content: '"';
-    font-style: normal
+    font-style: normal;
 }
 
 q:after {
     content: '"';
-    font-style: normal
+    font-style: normal;
 }
 
-textarea,
+/* textarea,
 input[type="text"],
 input[type="button"],
 input[type="submit"],
@@ -159,64 +159,64 @@ input[type="password"] {
     -webkit-appearance: none;
     appearance: none;
     border-radius: 0
-}
+} */
 
 table {
     border-collapse: collapse;
-    border-spacing: 0
+    border-spacing: 0;
 }
 
 th,
 td {
-    padding: 2px
+    padding: 2px;
 }
 
 big {
-    font-size: 120%
+    font-size: 120%;
 }
 
 small,
 sup,
 sub {
-    font-size: 80%
+    font-size: 80%;
 }
 
 sup {
-    vertical-align: super
+    vertical-align: super;
 }
 
 sub {
-    vertical-align: sub
+    vertical-align: sub;
 }
 
 dd {
-    margin-left: 20px
+    margin-left: 20px;
 }
 
 kbd,
 tt {
     font-family: courier;
-    font-size: 12px
+    font-size: 12px;
 }
 
 ins {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 del,
 strike,
 s {
-    text-decoration: line-through
+    text-decoration: line-through;
 }
 
 dt {
-    font-weight: bold
+    font-weight: bold;
 }
 
 address,
 cite,
 var {
-    font-style: italic
+    font-style: italic;
 }
 
 article,
@@ -230,16 +230,16 @@ hgroup,
 menu,
 nav,
 section {
-    display: block
+    display: block;
 }
 
 * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
-    transition: all 0.5s ease
+    transition: all 0.5s ease;
 }
 
-.sticky {}
+/* .sticky {}
 
 .bypostauthor {}
 
@@ -253,9 +253,9 @@ section {
 
 .alignleft {}
 
-.aligncenter {}
+.aligncenter {} */
 
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important
+    position: absolute !important;
 }
