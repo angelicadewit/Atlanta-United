@@ -17,6 +17,7 @@ TABLE OF CONTENTS:
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Rubik:400,500");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -76,23 +77,88 @@ body {
 	background: #ccc;
 }
 
+header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 200px;
+	background-color: black;
+	min-height: 100vh;
+}
+
+.page-wrap {
+	width: 100%;
+	width: calc(100% - 200px);
+	margin-left: 200px;
+}
+
 /* 2. Content ================================= */
-.container {
+#home-hero {
 	background-size: cover;
 	background-position-x: 50%;
 	width: 100%;
 	height: 0;
 	padding-bottom: 50vw;
+	position: relative;
 }
 
-.container h2 {
+#home-hero h2 {
 	font-size: 10rem;
+	font-family: "Playfair Display";
 	position: absolute;
 	background: rgba(0, 0, 0, 0.4);
 	color: #b8a972;
 	text-align: center;
 	top: 40%;
 	width: 100%;
+}
+
+.calendar .games {
+	width: 100%;
+	display: flex;
+}
+
+.calendar .games .game {
+	margin: 2%;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	width: 31.33%;
+	background: white;
+	font-size: 24px;
+	font-family: "Rubik";
+	border: 2px solid #9d2235;
+}
+
+.calendar .games .game p, .calendar .games .game span {
+	text-align: center;
+	padding: 20px;
+}
+
+.calendar .games .game .date-and-time {
+	display: flex;
+	flex-direction: row;
+	background: #9d2235;
+	color: #b8a972;
+	font-weight: 500;
+}
+
+.calendar .games .game .img-container {
+	display: flex;
+	justify-content: center;
+}
+
+.calendar .games .game .game-btn {
+	padding: 10px 15px;
+	background-color: #9d2235;
+	color: #b8a972;
+	width: fit-content;
+	align-self: center;
+	font-size: 18px;
+	margin-bottom: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

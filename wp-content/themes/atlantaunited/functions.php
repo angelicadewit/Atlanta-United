@@ -31,6 +31,7 @@ function atlantaunited_load_scripts() {
     wp_enqueue_style( 'atlantaunited-style', get_stylesheet_uri() );
     wp_enqueue_style( 'atlantaunited-style-from-scss', get_template_directory_uri() . '/dist/css/main.css', array(), '1.0.0' );
     wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'atlunited-js', get_template_directory_uri() . '/dist/js/main.js', array(), '1.0.0', true );
 }
 
 
@@ -38,6 +39,8 @@ function atlantaunited_load_scripts() {
 add_action( 'wp_footer', 'atlantaunited_footer_scripts' );
 function atlantaunited_footer_scripts() {
 ?>
+
+    
     <script>
         jQuery(document).ready(function ($) {
             var deviceAgent = navigator.userAgent.toLowerCase();
@@ -58,6 +61,7 @@ function atlantaunited_footer_scripts() {
             }
         });
     </script>
+    
     <?php
 }
 add_filter( 'document_title_separator', 'atlantaunited_document_title_separator' );
