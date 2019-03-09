@@ -30,7 +30,7 @@ $serif: "Playfair Display";
 }
 
 body {
-	background: #ccc;
+	background: black;
 }
 
 header {
@@ -46,6 +46,7 @@ header {
 	width: 100%;
 	width: calc(100% - 200px); // header width
 	margin-left: 200px;
+	height: auto;
 }
 
 
@@ -56,7 +57,7 @@ header {
 	background-position-x: 50%; 
 	width: 100%;
 	height: 0;
-	padding-bottom: 50vw;
+	padding-bottom: 45vw;
 	position: relative;
 
 	h2{
@@ -71,6 +72,10 @@ header {
 	}
 }
 
+.side-by-side-container{
+	display: flex;
+}
+
 .calendar{
 	
 	.games{
@@ -82,28 +87,48 @@ header {
 			display: flex;
 			flex-direction: column;
 			align-content: center;
-			width: 31.33%;
+			width: 30%;
 			background: white;
 			font-size: 24px;
 			font-family: $sans;
-			border: 2px solid $red;
+			border: 8px double $red;
 			
-			p, span{
+			span{
 				text-align: center;
-				padding: 20px;
+				padding: 1%;
+				margin-bottom: 5px;
 			}
 		
-			.date-and-time{
+			.date-wrapper{
 				display: flex;
-				flex-direction: row;
 				background: $red;
 				color: $gold;
 				font-weight: 500;
+				transform: translateY(-30%);
+				border-radius: 50%;
+				width: 150px;
+				height: 150px;
+				margin: 0 auto;
+				border: 2px solid $gold;
+				
+				
+				.date{
+					padding: 50px;
+					text-align: center;
+				}
+			}
+			
+			.time{
+				margin-top: -10%;
 			}
 		
 			.img-container{
 				display: flex;
 				justify-content: center;
+			}
+
+			.location{
+				padding-bottom: 20px;
 			}
 		
 			.game-btn{
@@ -117,7 +142,101 @@ header {
 				font-weight: 500;
 				text-transform: uppercase;
 				cursor: pointer;
+				align-self: center;
+				margin-top: auto;
 			}
+		}
+	}
+}
+
+.last-game-wrapper{
+	margin-bottom: 10%;
+	width: 450px;
+	padding: 10px;
+
+	.header{
+		background-color: $red;
+		font-size: 24px;
+		font-family: $serif;
+		padding: 20px;
+		text-align: center;
+		color: $gold;
+		
+		.date{
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	.atl-team{
+		text-align: center;
+		padding-bottom: 10px;
+	}
+
+	.other-team{
+		padding-bottom: 10px;
+		padding-left: 10px;
+	}
+
+
+	.score-wrapper{
+		display: flex;
+		
+	}
+
+	.opponent-div,
+	.atl-div{
+		font-family: $sans;
+		font-size: 1.2rem;
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 50%;
+		padding-top: 20px;
+	}
+
+	.mid-wrapper{
+		display: flex;
+		justify-content: space-between;
+		
+		.score{
+			font-size: 4rem;
+			align-self: center;
+		}
+		
+	}
+
+	.atl-team{
+		text-align: right;
+		padding-right: 10px;
+	}
+
+	.bottom-info{
+		background: white;
+		display: flex;
+		flex-direction: column;
+
+		.location{
+			text-align: center;
+			font-size: 24px;
+			font-family: $sans;
+			padding-bottom: 20px;
+		}
+	
+		.game-btn{
+			padding: 10px 15px;
+			background-color: $red;
+			color: $gold;
+			width: fit-content;
+			align-self: center;
+			font-size: 18px;
+			margin-bottom: 20px;
+			font-weight: 500;
+			text-transform: uppercase;
+			cursor: pointer;
+			align-self: center;
+			margin-top: auto;
 		}
 	}
 }
