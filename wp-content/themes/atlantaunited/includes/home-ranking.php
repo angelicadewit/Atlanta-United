@@ -1,16 +1,28 @@
-<div class="ranking">
-        <?php 
-            $args = array(
-                "post_type" => "games",
-                // "category_name" => get_field('games_display_category'),
-                "posts_per_page" => -1,
-            );
-            $query = new WP_Query($args);
-            if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); 
-            
-            ?>
+<div class="last-game-wrapper">
+    <div class="header">
+        <p>Current Rank</p>
+        <p class="ranking"><?php echo the_field('rank') ?></p>
+    </div>
+    <div class="score-wrapper mid-section">
 
-        <?php endwhile; wp_reset_postdata(); endif; ?>
-    </ul>
+        <div class="total">
+            <p>gp</p>
+            <span><?php echo get_field('games_played') ?></span>
+        </div>
 
+        <div class="wins">
+            <p>w</p>
+            <span><?php echo get_field('wins') ?></span>
+        </div>
+        
+        <div class="loss">
+            <p>l</p>
+            <span><?php echo get_field('loss') ?></span>
+        </div>
+        
+        <div class="draws">
+            <p>d</p>
+            <span><?php echo get_field('draws') ?></span>
+        </div>
+    </div>
 </div>

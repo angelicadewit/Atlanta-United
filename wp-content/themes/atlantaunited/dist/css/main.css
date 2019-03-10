@@ -101,6 +101,7 @@ header {
 	height: 0;
 	padding-bottom: 45vw;
 	position: relative;
+	margin-bottom: 2%;
 }
 
 #home-hero h2 {
@@ -116,6 +117,7 @@ header {
 
 .side-by-side-container {
 	display: flex;
+	justify-content: space-evenly;
 }
 
 .calendar .games {
@@ -191,6 +193,8 @@ header {
 	margin-bottom: 10%;
 	width: 450px;
 	padding: 10px;
+	border: 5px double #9d2235;
+	background-color: white;
 }
 
 .last-game-wrapper .header {
@@ -219,18 +223,17 @@ header {
 
 .last-game-wrapper .score-wrapper {
 	display: flex;
+	font-family: "Rubik";
+	font-size: 1.2rem;
+	padding-top: 20px;
+	justify-content: center;
 }
 
 .last-game-wrapper .opponent-div,
 .last-game-wrapper .atl-div {
-	font-family: "Rubik";
-	font-size: 1.2rem;
-	background-color: white;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	width: 50%;
-	padding-top: 20px;
 }
 
 .last-game-wrapper .mid-wrapper {
@@ -274,6 +277,31 @@ header {
 	cursor: pointer;
 	align-self: center;
 	margin-top: auto;
+}
+
+.last-game-wrapper .mid-section {
+	justify-content: space-evenly;
+	padding: 20% 0%;
+}
+
+.last-game-wrapper .mid-section .total,
+.last-game-wrapper .mid-section .wins,
+.last-game-wrapper .mid-section .loss,
+.last-game-wrapper .mid-section .draws {
+	display: flex;
+	flex-direction: column;
+}
+
+.last-game-wrapper .mid-section p {
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-decoration-color: #9d2235;
+}
+
+.last-game-wrapper .mid-section span {
+	text-align: center;
+	font-size: 2.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

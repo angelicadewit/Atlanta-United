@@ -11,7 +11,7 @@
     <div class="side-by-side-container">
         <?php echo get_template_part('includes/home', 'past') ?>
 
-        <?php //echo get_template_part('includes/home', 'ranking') ?>
+        <?php echo get_template_part('includes/home', 'ranking') ?>
         
         <?php echo get_template_part('includes/home', 'current') ?>
     </div>

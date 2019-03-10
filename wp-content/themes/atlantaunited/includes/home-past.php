@@ -36,7 +36,7 @@
             </div>
             <div class="atl-div">
                 <div class="mid-wrapper">
-                    <span class="score "><?php echo get_field('atl_score') ?></span>
+                    <span class="score"><?php echo get_field('atl_score') ?></span>
                     <div class="img-wrapper">
                         <img src="<?php echo get_template_directory_uri() ?>/dist/images/logos/atlantaunited.gif">
                     </div>
