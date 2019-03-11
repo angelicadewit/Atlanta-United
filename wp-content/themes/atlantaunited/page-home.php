@@ -21,7 +21,7 @@
 
     <div class="side-by-side-container">
 
-        <?php // echo get_template_part('includes/home', 'news') ?>
+        <?php echo get_template_part('includes/home', 'news') ?>
 
         <?php // echo get_template_part('includes/home', 'tweets') ?>
     </div>
