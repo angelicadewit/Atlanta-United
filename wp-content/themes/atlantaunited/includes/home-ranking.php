@@ -1,9 +1,9 @@
-<div class="last-game-wrapper">
+<div class="last-game-wrapper ranking">
     <div class="header">
         <p>Current Rank</p>
         <p class="ranking"><?php echo the_field('rank') ?></p>
     </div>
-    <div class="score-wrapper mid-section">
+    <div class="score-wrapper mid-section ranking">
 
         <div class="total">
             <p>gp</p>

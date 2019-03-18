@@ -226,10 +226,22 @@ body {
 
 .last-game-wrapper {
 	margin-bottom: 10%;
-	width: 450px;
+	width: 100%;
 	padding: 10px;
 	border: 5px double #9d2235;
 	background-color: white;
+}
+
+@media only screen and (min-width: 700px) {
+	.last-game-wrapper {
+		width: 450px;
+	}
+}
+
+.last-game-wrapper.ranking {
+	background-image: url(../img/background.jpg);
+	background-size: cover;
+	background-position-x: 50%;
 }
 
 .last-game-wrapper .header {
@@ -264,6 +276,10 @@ body {
 	justify-content: center;
 }
 
+.last-game-wrapper .score-wrapper.ranking {
+	background: rgba(225, 225, 225, 0.6);
+}
+
 .last-game-wrapper .opponent-div,
 .last-game-wrapper .atl-div {
 	display: flex;
@@ -273,7 +289,13 @@ body {
 
 .last-game-wrapper .mid-wrapper {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 700px) {
+	.last-game-wrapper .mid-wrapper {
+		justify-content: space-between;
+	}
 }
 
 .last-game-wrapper .mid-wrapper .score {

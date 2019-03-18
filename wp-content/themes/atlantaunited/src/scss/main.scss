@@ -202,10 +202,21 @@ header {
 
 .last-game-wrapper{
 	margin-bottom: 10%;
-	width: 450px;
+	width: 100%;
 	padding: 10px;
 	border: 5px double $red;
 	background-color: white;
+
+	@include tablet{
+		width: 450px;
+	}
+
+	&.ranking{
+		background-image: url(../img/background.jpg);
+		background-size: cover;
+		background-position-x: 50%;
+
+	}
 
 	.header{
 		background-color: $red;
@@ -238,6 +249,9 @@ header {
 		padding-top: 20px;
 		justify-content: center;
 
+		&.ranking{
+			background: rgba(225,225,225,0.6);
+		}
 	}
 
 	.opponent-div,
@@ -249,7 +263,11 @@ header {
 
 	.mid-wrapper{
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-evenly;
+
+		@include tablet{
+			justify-content: space-between;
+		}
 		
 		.score{
 			font-size: 4rem;
