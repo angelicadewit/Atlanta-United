@@ -22,6 +22,22 @@ $red: #9d2235;
 $sans: "Rubik";
 $serif: "Playfair Display";
 
+$tablet-breakpoint: 700px;
+$desktop-breakpoint: 1100px;
+
+@mixin tablet {
+	@media only screen and (min-width: $tablet-breakpoint){
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media only screen and (min-width: $desktop-breakpoint){
+		@content;
+	}
+}
+
+
 
 /* 1. Main Layout ================================= */
 
@@ -146,6 +162,14 @@ header {
 				cursor: pointer;
 				align-self: center;
 				margin-top: auto;
+				transition: 0.2s;
+
+				&:hover{
+					background-color: $gold;
+					color: $red;
+					transition: 0.2s;
+					transform: rotate(2deg);
+				}
 			}
 		}
 	}
@@ -239,6 +263,14 @@ header {
 			cursor: pointer;
 			align-self: center;
 			margin-top: auto;
+			transition: 0.2s;
+
+			&:hover{
+				background-color: $gold;
+				color: $red;
+				transition: 0.2s;
+				transform: rotate(2deg);
+			}
 		}
 	}
 
@@ -267,3 +299,57 @@ header {
 		}
 	}
 }
+
+.news-articles{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	.img-wrapper{
+
+		position: relative;
+		overflow: hidden;
+		
+		img{
+			width: 100%;
+			transition: 0.2s;
+			
+			&:hover{
+				cursor: pointer;
+				transform: scale(1.2);
+				transition: 0.5s;
+			}
+		}
+	}
+	
+}
+
+.article{
+	border: 5px double $red;
+	background: white;
+	&.featured{
+		width: 48%;
+		margin: 1%;
+	}
+	
+	&.regular{
+		width: 31.33%;
+		margin: 0% 1%;
+	}
+		
+	
+	.headline{
+		background: $red;
+		padding: 2%;
+		border-top: 2px solid $red;
+		color: $gold;
+	
+		span{
+	
+			font-family: $sans;
+			font-size: 1.2rem;
+		}
+	}
+}
+
+

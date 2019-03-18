@@ -187,6 +187,14 @@ header {
 	cursor: pointer;
 	align-self: center;
 	margin-top: auto;
+	transition: 0.2s;
+}
+
+.calendar .games .game .game-btn:hover {
+	background-color: #b8a972;
+	color: #9d2235;
+	transition: 0.2s;
+	transform: rotate(2deg);
 }
 
 .last-game-wrapper {
@@ -277,6 +285,14 @@ header {
 	cursor: pointer;
 	align-self: center;
 	margin-top: auto;
+	transition: 0.2s;
+}
+
+.last-game-wrapper .bottom-info .game-btn:hover {
+	background-color: #b8a972;
+	color: #9d2235;
+	transition: 0.2s;
+	transform: rotate(2deg);
 }
 
 .last-game-wrapper .mid-section {
@@ -302,6 +318,55 @@ header {
 .last-game-wrapper .mid-section span {
 	text-align: center;
 	font-size: 3rem;
+}
+
+.news-articles {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.news-articles .img-wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.news-articles .img-wrapper img {
+	width: 100%;
+	transition: 0.2s;
+}
+
+.news-articles .img-wrapper img:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+	transition: 0.5s;
+}
+
+.article {
+	border: 5px double #9d2235;
+	background: white;
+}
+
+.article.featured {
+	width: 48%;
+	margin: 1%;
+}
+
+.article.regular {
+	width: 31.33%;
+	margin: 0% 1%;
+}
+
+.article .headline {
+	background: #9d2235;
+	padding: 2%;
+	border-top: 2px solid #9d2235;
+	color: #b8a972;
+}
+
+.article .headline span {
+	font-family: "Rubik";
+	font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
