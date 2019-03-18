@@ -98,6 +98,10 @@ header {
 		top: 40%;
 		width: 100%;
 
+		@include tablet{
+			font-size: 8rem;
+		}
+
 		@include desktop{
 			font-size: 10rem;
 		}
