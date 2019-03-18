@@ -75,6 +75,75 @@ header {
 
 /* 2. Content ================================= */
 
+nav#menu{
+
+	.menu-menu-1-container ul {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		font-family: $sans;
+		font-weight: 400;
+		background: black;
+		padding-inline-start: 0px;
+
+		@include tablet{
+
+			flex-direction: row; 
+			flex-wrap: nowrap;
+			justify-content: space-evenly;
+			margin: 1% 0%;
+		}
+		
+		@include desktop{
+			flex-direction: column;
+			
+		}
+	}
+	
+	li{
+
+		padding: 8px 20px;
+
+		@include desktop{
+
+			padding: 30px 30px;
+			border-top: 1px solid $gold;
+			
+			&:first-child{
+				margin-top: 50px;
+			}
+
+			&:last-child{
+				border-bottom: 1px solid $gold;
+			}
+		}
+
+		&:hover{
+			background: $gold;
+			cursor: pointer;
+			border-right: 5px solid $red;
+			border-left: 5px solid $red;
+
+			@include desktop{
+				border-left: 20px solid $red;
+			}
+		}
+	}
+	
+	a{
+		font-size: 25px;
+		padding: 0 15px;
+		color: $red;
+		text-decoration: none;
+		transition: 0.2s;
+		
+		@include desktop{
+			padding: 30px;
+		}
+
+	}
+}
+
 #home-hero{
 	background-size: cover;
 	background-position-x: 50%; 
@@ -138,7 +207,8 @@ header {
 			position: relative;
 
 			@include tablet{
-				margin: 10% 2%;
+				margin: 10% auto;
+				width:75%;
 			}
 			
 			@include desktop{
