@@ -156,6 +156,7 @@ body {
 
 .calendar .games .game {
 	margin: 2%;
+	margin-bottom: 15%;
 	background: white;
 	font-size: 24px;
 	font-family: "Rubik";
@@ -163,11 +164,19 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-content: center;
+	position: relative;
+}
+
+@media only screen and (min-width: 700px) {
+	.calendar .games .game {
+		margin: 10% 2%;
+	}
 }
 
 @media only screen and (min-width: 1200px) {
 	.calendar .games .game {
 		width: 30%;
+		margin-bottom: 0;
 	}
 }
 
@@ -182,11 +191,23 @@ body {
 	background: #9d2235;
 	color: #b8a972;
 	font-weight: 500;
-	transform: translateY(-30%);
 	border-radius: 50%;
 	width: 150px;
 	height: 150px;
 	margin: 0 auto;
+	transform: translateY(-30%);
+}
+
+@media only screen and (min-width: 700px) {
+	.calendar .games .game .date-wrapper {
+		transform: translateY(-40%);
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.calendar .games .game .date-wrapper {
+		transform: translateY(-30%);
+	}
 }
 
 .calendar .games .game .date-wrapper .date {
@@ -240,7 +261,17 @@ body {
 
 @media only screen and (min-width: 700px) {
 	.last-game-wrapper {
+		width: 75%;
+		margin: 20px auto;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.last-game-wrapper {
 		width: 450px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 }
 
@@ -282,8 +313,14 @@ body {
 	justify-content: center;
 }
 
+@media only screen and (min-width: 1200px) {
+	.last-game-wrapper .score-wrapper {
+		padding-top: 20%;
+	}
+}
+
 .last-game-wrapper .score-wrapper.ranking {
-	background: rgba(225, 225, 225, 0.6);
+	background: rgba(225, 225, 225, 0.5);
 }
 
 .last-game-wrapper .opponent-div,
@@ -307,6 +344,7 @@ body {
 .last-game-wrapper .mid-wrapper .score {
 	font-size: 4rem;
 	align-self: center;
+	justify-content: center;
 }
 
 .last-game-wrapper .atl-team {
@@ -318,6 +356,8 @@ body {
 	background: white;
 	display: flex;
 	flex-direction: column;
+	align-self: center;
+	margin-top: auto;
 }
 
 .last-game-wrapper .bottom-info .location {
@@ -362,6 +402,7 @@ body {
 .last-game-wrapper .mid-section .draws {
 	display: flex;
 	flex-direction: column;
+	width: 50%;
 }
 
 .last-game-wrapper .mid-section p {
@@ -369,11 +410,26 @@ body {
 	text-transform: uppercase;
 	text-decoration: underline;
 	text-decoration-color: #9d2235;
+	text-align: center;
 }
 
 .last-game-wrapper .mid-section span {
 	text-align: center;
 	font-size: 3rem;
+}
+
+@media only screen and (min-width: 1200px) {
+	.last-game-wrapper .mid-section .tablet-hide {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 1340px) {
+	.last-game-wrapper .mid-section .tablet-hide {
+		display: inline-block;
+		text-decoration: underline;
+		text-decoration-color: #9d2235;
+	}
 }
 
 @media only screen and (min-width: 1200px) {

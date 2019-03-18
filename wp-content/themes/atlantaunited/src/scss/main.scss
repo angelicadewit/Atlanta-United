@@ -127,6 +127,7 @@ header {
 
 		.game{
 			margin: 2%;
+			margin-bottom: 15%;
 			background: white;
 			font-size: 24px;
 			font-family: $sans;
@@ -134,10 +135,15 @@ header {
 			display: flex;
 			flex-direction: column;
 			align-content: center;
+			position: relative;
+
+			@include tablet{
+				margin: 10% 2%;
+			}
 			
 			@include desktop{
 				width: 30%;
-
+				margin-bottom: 0;
 			}
 			
 			
@@ -152,11 +158,19 @@ header {
 				background: $red;
 				color: $gold;
 				font-weight: 500;
-				transform: translateY(-30%);
 				border-radius: 50%;
 				width: 150px;
 				height: 150px;
 				margin: 0 auto;
+				transform: translateY(-30%);
+
+				@include tablet{
+					transform: translateY(-40%);
+				}
+				
+				@include desktop{
+					transform: translateY(-30%);
+				}
 				
 				
 				.date{
@@ -210,9 +224,18 @@ header {
 	padding: 10px;
 	border: 5px double $red;
 	background-color: white;
-
+	
+	
 	@include tablet{
+		width:75%;
+		margin: 20px auto;
+	}
+	
+	@include desktop{
 		width: 450px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	&.ranking{
@@ -253,8 +276,12 @@ header {
 		padding-top: 20px;
 		justify-content: center;
 
+		@include desktop{
+			padding-top: 20%;
+		}
+
 		&.ranking{
-			background: rgba(225,225,225,0.6);
+			background: rgba(225,225,225,0.5);
 		}
 	}
 
@@ -276,6 +303,7 @@ header {
 		.score{
 			font-size: 4rem;
 			align-self: center;
+			justify-content: center;
 		}
 		
 	}
@@ -289,6 +317,8 @@ header {
 		background: white;
 		display: flex;
 		flex-direction: column;
+		align-self: center;
+		margin-top: auto;
 
 		.location{
 			text-align: center;
@@ -332,6 +362,7 @@ header {
 		.draws{
 			display: flex;
 			flex-direction: column;
+			width: 50%;
 		}
 
 		p{
@@ -339,11 +370,24 @@ header {
 			text-transform: uppercase;
 			text-decoration: underline;
 			text-decoration-color: $red;
+			text-align: center;
 		}
 
 		span{
 			text-align: center;
 			font-size: 3rem;
+		}
+
+		.tablet-hide{
+
+			@include desktop{
+				display: none;
+			}
+			@media only screen and (min-width: 1340px){
+				display: inline-block;
+				text-decoration: underline;
+				text-decoration-color: $red;
+			}
 		}
 	}
 }
@@ -406,7 +450,6 @@ header {
 		color: $gold;
 	
 		span{
-	
 			font-family: $sans;
 			font-size: 1.2rem;
 		}
