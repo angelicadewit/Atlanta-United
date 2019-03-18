@@ -23,7 +23,7 @@ $sans: "Rubik";
 $serif: "Playfair Display";
 
 $tablet-breakpoint: 700px;
-$desktop-breakpoint: 1100px;
+$desktop-breakpoint: 1200px;
 
 @mixin tablet {
 	@media only screen and (min-width: $tablet-breakpoint){
@@ -320,6 +320,7 @@ header {
 	.mid-section{
 		justify-content: space-evenly;
 		padding: 20% 0%;
+		flex-wrap: wrap;
 
 		.total,
 		.wins,
@@ -344,9 +345,13 @@ header {
 }
 
 .news-articles{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+
+	@include desktop{
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 
 	.img-wrapper{
 
@@ -370,14 +375,23 @@ header {
 .article{
 	border: 5px double $red;
 	background: white;
+
 	&.featured{
-		width: 48%;
-		margin: 1%;
+		margin: 2%;
+
+		@include desktop{
+			margin: 1%;
+			width: 48%;
+		}
 	}
 	
 	&.regular{
-		width: 31.33%;
-		margin: 0% 1%;
+		margin: 2%;
+
+		@include desktop{
+			margin: 0% 1%;
+			width: 31.33%;
+		}
 	}
 		
 	
